@@ -13,6 +13,26 @@
 > **Important**: EDTA-Audit is an **auditing/screening layer**, not a replacement for EDTA, and not a final arbiter of “biological truth”.
 
 ---
+## Version note
+
+EDTA-Audit v1.0.0 is the original Bash implementation. It classifies audited EDTA outputs into PASS and FAIL categories and generates `edta_passed_list.txt` and `edta_failed_list.txt`.
+
+EDTA-Audit v2.0.0 is a Python-based refactoring released after v1.0.0. Compared with v1.0.0, v2.0.0 introduces expanded tabular outputs (`all.tsv`, `pass.tsv`, `suspect.tsv`, `fail.tsv`, and `summary.txt`) and a new `SUSPECT` output category for intermediate warning cases.
+
+Users who wish to reproduce analyses performed with the original Bash implementation should use the v1.0.0 release/tag. Users who prefer the updated reporting format should use v2.0.0.
+
+## Required EDTA option
+
+Both EDTA-Audit v1.0.0 and v2.0.0 require EDTA annotation outputs generated with the EDTA `--anno 1` option. EDTA-Audit relies on `*.TEanno.sum` and related annotation files to evaluate global TE content, annotation completeness, and TE-library profiles.
+
+Before running EDTA-Audit, please run EDTA with annotation enabled, for example:
+
+```bash
+EDTA.pl --genome genome.fa --species others --anno 1
+```
+
+If EDTA is run without `--anno 1`, the required `TEanno` output files may be missing, and EDTA-Audit may report the sample as incomplete or unavailable for auditing.
+
 
 ## What it checks
 
