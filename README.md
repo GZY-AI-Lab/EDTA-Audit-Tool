@@ -4,13 +4,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#license)
 [![Python](https://img.shields.io/badge/Python-%E2%89%A53.8-blue.svg)](#requirements)
 
-**EDTA-Audit** is a lightweight, dependency-free post-processing QC tool for auditing *de novo* TE annotations produced by **EDTA**. It is designed for **large-scale pipelines** (HPC/cloud) where you need to quickly identify:
+EDTA-Audit is a lightweight Python tool with no third-party dependencies for post-processing QC of de novo TE annotations produced by EDTA. It is designed for large-scale pipelines (HPC/cloud) where users need to quickly identify:
 
-- **Technically incomplete EDTA outputs** (missing/empty key files or directories)
-- **Biologically implausible TE profiles** using **conservative, taxonomy-aware heuristics**
-- **Actionable diagnostics** (transparent tags; no black-box scoring)
+* Technically incomplete EDTA outputs, such as missing or empty key files or directories
+* Unusual or potentially problematic TE profiles flagged by conservative, taxonomy-aware heuristics
+* Actionable diagnostic tags for troubleshooting and manual inspection
 
-> **Important**: EDTA-Audit is an **auditing/screening layer**, not a replacement for EDTA, and not a final arbiter of “biological truth”.
+> Important: EDTA-Audit is an auditing/screening layer. It is not a replacement for EDTA, manual review, independent TE annotation, or taxon-specific biological interpretation.
+
 
 ---
 ## Version note
