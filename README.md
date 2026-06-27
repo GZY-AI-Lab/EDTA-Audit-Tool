@@ -346,12 +346,6 @@ MIT — see `LICENSE`.
 
 ---
 
-## Author
-
-**Di Liu**  
-GitHub: DiLiu-Lab
-
----
 
 ## Acknowledgements
 
